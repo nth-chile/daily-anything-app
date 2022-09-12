@@ -7,18 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2904DD5028637C89003A13A4 /* setNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904DD4F28637C89003A13A4 /* setNotification.swift */; };
+		2904DD5328637F71003A13A4 /* getNextThing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904DD5228637F71003A13A4 /* getNextThing.swift */; };
+		292CB815285A04B200004A3E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CB814285A04B200004A3E /* SettingsView.swift */; };
 		29952092284A5E2700318DFC /* DailyAnythingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29952091284A5E2700318DFC /* DailyAnythingApp.swift */; };
 		29952094284A5E2700318DFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29952093284A5E2700318DFC /* ContentView.swift */; };
 		29952096284A5E2800318DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29952095284A5E2800318DFC /* Assets.xcassets */; };
 		29952099284A5E2800318DFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29952098284A5E2800318DFC /* Preview Assets.xcassets */; };
+		29BE8CD9284A6F2100554980 /* DailyAnything.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29BE8CD7284A6F2100554980 /* DailyAnything.xcdatamodeld */; };
+		29BE8CDB284A70B200554980 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BE8CDA284A70B200554980 /* DataController.swift */; };
+		29BF867028523BE700B88E4E /* ThingAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF866F28523BE700B88E4E /* ThingAdder.swift */; };
+		29CB27B828537AE6005AFA07 /* ThingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27B728537AE6005AFA07 /* ThingCard.swift */; };
+		29CB27BC28538438005AFA07 /* ThingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27BB28538438005AFA07 /* ThingDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2904DD4F28637C89003A13A4 /* setNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setNotification.swift; sourceTree = "<group>"; };
+		2904DD5228637F71003A13A4 /* getNextThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getNextThing.swift; sourceTree = "<group>"; };
+		292CB814285A04B200004A3E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2995208E284A5E2700318DFC /* DailyAnything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyAnything.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29952091284A5E2700318DFC /* DailyAnythingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAnythingApp.swift; sourceTree = "<group>"; };
 		29952093284A5E2700318DFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29952095284A5E2800318DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29952098284A5E2800318DFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29BE8CD8284A6F2100554980 /* DailyAnything.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyAnything.xcdatamodel; sourceTree = "<group>"; };
+		29BE8CDA284A70B200554980 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		29BF866F28523BE700B88E4E /* ThingAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingAdder.swift; sourceTree = "<group>"; };
+		29CB27B728537AE6005AFA07 /* ThingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCard.swift; sourceTree = "<group>"; };
+		29CB27BB28538438005AFA07 /* ThingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2904DD5128637F24003A13A4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2904DD4F28637C89003A13A4 /* setNotification.swift */,
+				2904DD5228637F71003A13A4 /* getNextThing.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		29952085284A5E2700318DFC = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +76,17 @@
 		29952090284A5E2700318DFC /* DailyAnything */ = {
 			isa = PBXGroup;
 			children = (
-				29952091284A5E2700318DFC /* DailyAnythingApp.swift */,
-				29952093284A5E2700318DFC /* ContentView.swift */,
 				29952095284A5E2800318DFC /* Assets.xcassets */,
+				29952093284A5E2700318DFC /* ContentView.swift */,
+				29BE8CD7284A6F2100554980 /* DailyAnything.xcdatamodeld */,
+				29952091284A5E2700318DFC /* DailyAnythingApp.swift */,
+				29BE8CDA284A70B200554980 /* DataController.swift */,
 				29952097284A5E2800318DFC /* Preview Content */,
+				292CB814285A04B200004A3E /* SettingsView.swift */,
+				29BF866F28523BE700B88E4E /* ThingAdder.swift */,
+				29CB27B728537AE6005AFA07 /* ThingCard.swift */,
+				29CB27BB28538438005AFA07 /* ThingDetailView.swift */,
+				2904DD5128637F24003A13A4 /* utils */,
 			);
 			path = DailyAnything;
 			sourceTree = "<group>";
@@ -137,7 +169,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2904DD5028637C89003A13A4 /* setNotification.swift in Sources */,
+				29CB27B828537AE6005AFA07 /* ThingCard.swift in Sources */,
+				292CB815285A04B200004A3E /* SettingsView.swift in Sources */,
+				29BF867028523BE700B88E4E /* ThingAdder.swift in Sources */,
+				29CB27BC28538438005AFA07 /* ThingDetailView.swift in Sources */,
+				29BE8CD9284A6F2100554980 /* DailyAnything.xcdatamodeld in Sources */,
+				29BE8CDB284A70B200554980 /* DataController.swift in Sources */,
 				29952094284A5E2700318DFC /* ContentView.swift in Sources */,
+				2904DD5328637F71003A13A4 /* getNextThing.swift in Sources */,
 				29952092284A5E2700318DFC /* DailyAnythingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
+				DEVELOPMENT_TEAM = D6GZ2XP6D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
+				DEVELOPMENT_TEAM = D6GZ2XP6D2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29BE8CD7284A6F2100554980 /* DailyAnything.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29BE8CD8284A6F2100554980 /* DailyAnything.xcdatamodel */,
+			);
+			currentVersion = 29BE8CD8284A6F2100554980 /* DailyAnything.xcdatamodel */;
+			path = DailyAnything.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29952086284A5E2700318DFC /* Project object */;
 }
