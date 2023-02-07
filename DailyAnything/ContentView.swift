@@ -11,24 +11,8 @@ import UserNotifications
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var things: FetchedResults<Thing>
-    @State private var alertIsPresented = false
-    
-    // Maybe show alert with option to go to settings and turn on notifications
-    func maybeShowAlert() async {
-        let settings = await UNUserNotificationCenter.current().notificationSettings()
-        
-        if settings.authorizationStatus != .authorized {
-            alertIsPresented = true
-        }
-    }
-    
-    init() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
-    }
+    @Binding var didCheckNotifsOnLaunch: Bool
+    @State private var showCustomNotifAlert = false
     
     var body: some View {
         NavigationView {
@@ -40,9 +24,25 @@ struct ContentView: View {
                     }
                 }
             }
-            .onAppear{
-                Task {
-                    await maybeShowAlert()
+            .onAppear() {
+                if !didCheckNotifsOnLaunch {
+                    Task {
+                        let notifSettings = await UNUserNotificationCenter.current().notificationSettings()
+                        
+                        if notifSettings.authorizationStatus == .denied {
+                            // If user has denied notifications in the past, show a custom alert that links to settings
+                            showCustomNotifAlert = true
+                        } else if notifSettings.authorizationStatus == .notDetermined {
+                            // If user has not denied or allowed notifications, show the system dialog
+                            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                }
+                            }
+                        }
+                        
+                        didCheckNotifsOnLaunch = true
+                    }
                 }
             }
             .navigationTitle("Things")
@@ -51,7 +51,7 @@ struct ContentView: View {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
             }
-            .alert(isPresented: $alertIsPresented) {
+            .alert(isPresented: $showCustomNotifAlert) {
                 Alert(
                     title: Text("Notifications"),
                     message: Text("Turn on notifications in the Settings app."),

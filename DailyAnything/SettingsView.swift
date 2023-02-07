@@ -13,7 +13,7 @@ struct SettingsView: View {
     @State private var time = Calendar.current.date(from: DateComponents(hour: 9, minute: 0))!
 
     var body: some View {
-        Form{
+        Form {
             Section() {
                 Toggle("Allow reminders", isOn: $allowReminders)
             }

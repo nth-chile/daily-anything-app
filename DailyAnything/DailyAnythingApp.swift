@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct DailyAnythingApp: App {
     @StateObject private var dataController = DataController()
+    @State private var didCheckNotifsOnLaunch = false
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(didCheckNotifsOnLaunch: $didCheckNotifsOnLaunch)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

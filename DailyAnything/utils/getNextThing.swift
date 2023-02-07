@@ -1,10 +1,3 @@
-//
-//  getNextThing.swift
-//  DailyAnything
-//
-//  Created by Jared Salzano on 6/22/22.
-//
-
 import CoreData
 
 func getNextThing(_ moc: NSManagedObjectContext) -> Thing? {
@@ -16,7 +9,6 @@ func getNextThing(_ moc: NSManagedObjectContext) -> Thing? {
         let result = try moc.fetch(request)
         
         guard result.count == 1 else {
-            print("No Things")
             return nil
         }
         
