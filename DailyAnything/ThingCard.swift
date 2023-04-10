@@ -1,33 +1,22 @@
-//
-//  ThingCard.swift
-//  DailyAnything
-//
-//  Created by Jared Salzano on 6/10/22.
-//
-
 import SwiftUI
 
 struct ThingCard: View {
-    let thing: Thing
+    @ObservedObject var thing: Thing
     
     var body: some View {
-        NavigationLink (destination: ThingDetailView(thing: thing)) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .fill(.regularMaterial)
-                VStack () {
-                    HStack {
-                        Text(thing.value ?? "")
-                            .foregroundColor(.primary)
-                            .multilineTextAlignment(.leading)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                    Spacer()
-                }
-                .padding()
+        ZStack {
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                .fill(.white)
+            HStack {
+                Text(thing.value ?? "")
+                    .foregroundColor(.primary)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                Image(systemName: "chevron.right")
             }
+            .padding()
+            .lineLimit(1)
         }
-        .padding()
+        .padding([.horizontal, .bottom])
     }
 }

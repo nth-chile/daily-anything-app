@@ -1,51 +1,37 @@
-//
-//  ContentView.swift
-//  DailyAnything
-//
-//  Created by Jared Salzano on 6/3/22.
-//
-
 import SwiftUI
 import UserNotifications
 
+enum NavDestinations {
+    case nextThing
+}
+
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var things: FetchedResults<Thing>
     @Binding var didCheckNotifsOnLaunch: Bool
     @State private var showCustomNotifAlert = false
-    
+    @EnvironmentObject private var uncDelegate: UNCDelegate
+
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $uncDelegate.navigationPath) {
             ScrollView {
                 VStack {
                     ThingAdder()
                     ForEach(things) { thing in
-                        ThingCard(thing: thing)
-                    }
-                }
-            }
-            .onAppear() {
-                if !didCheckNotifsOnLaunch {
-                    Task {
-                        let notifSettings = await UNUserNotificationCenter.current().notificationSettings()
-                        
-                        if notifSettings.authorizationStatus == .denied {
-                            // If user has denied notifications in the past, show a custom alert that links to settings
-                            showCustomNotifAlert = true
-                        } else if notifSettings.authorizationStatus == .notDetermined {
-                            // If user has not denied or allowed notifications, show the system dialog
-                            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                                if let error = error {
-                                    print(error.localizedDescription)
-                                }
-                            }
+                        NavigationLink (value: thing) {
+                            ThingCard(thing: thing)
                         }
-                        
-                        didCheckNotifsOnLaunch = true
                     }
                 }
             }
             .navigationTitle("Things")
+            .navigationDestination(for: NavDestinations.self) { destination in
+                switch destination {
+                    case .nextThing: NextThingView()
+                }
+            }
+            .navigationDestination(for: Thing.self) { thing in
+                ThingDetailView(thing: thing)
+            }
             .toolbar {
                 NavigationLink (destination: SettingsView()) {
                     Label("Settings", systemImage: "gearshape.fill")
@@ -66,7 +52,29 @@ struct ContentView: View {
                     )
                 )
             }
+            .background(.regularMaterial)
+            .onAppear() {
+                if !didCheckNotifsOnLaunch {
+                    Task {
+                        let notifSettings = await UNUserNotificationCenter.current().notificationSettings()
+                        
+                        if notifSettings.authorizationStatus == .denied {
+                            // If user has denied notifications in the past, show a custom alert that links to settings
+                            showCustomNotifAlert = true
+                        } else if notifSettings.authorizationStatus == .notDetermined {
+                            // If user has not denied or allowed notifications, show the system dialog
+                            UNUserNotificationCenter.current()
+                                .requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                    if let error = error {
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                        }
+                        
+                        didCheckNotifsOnLaunch = true
+                    }
+                }
+            }
         }
-        .navigationViewStyle(.stack)
     }
 }

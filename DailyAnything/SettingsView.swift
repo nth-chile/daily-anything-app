@@ -1,22 +1,22 @@
-//
-//  SettingsView.swift
-//  DailyAnything
-//
-//  Created by Jared Salzano on 6/15/22.
-//
-
 import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("allowReminders") private var allowReminders = true
     @Environment(\.managedObjectContext) var moc
-    @State private var time = Calendar.current.date(from: DateComponents(hour: 9, minute: 0))!
+    @State private var time = getNotificationTime()
 
     var body: some View {
         Form {
             Section() {
                 Toggle("Allow reminders", isOn: $allowReminders)
+                    .onChange(of: allowReminders) { value in
+                        Task {
+                            // Even if toggle is being turned off, this function will handle that too
+                            await scheduleDailyNotification(moc: moc)
+                        }
+                    }
             }
+            
             if allowReminders == true {
                 Section() {
                     DatePicker(
@@ -25,7 +25,9 @@ struct SettingsView: View {
                         displayedComponents: [.hourAndMinute]
                     ).onChange(of: time) { newValue in
                         Task {
-                            await setNotification(moc: moc, date: newValue)
+                            print("Notif time changed.")
+                            UserDefaults.standard.set(newValue, forKey: "notificationTime")
+                            await scheduleDailyNotification(moc: moc)
                         }
                     }
                 }

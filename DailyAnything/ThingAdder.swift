@@ -1,10 +1,3 @@
-//
-//  ThingAdder.swift
-//  DailyAnything
-//
-//  Created by Jared Salzano on 6/9/22.
-//
-
 import SwiftUI
 
 struct ThingAdder: View {
@@ -19,11 +12,12 @@ struct ThingAdder: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(.regularMaterial)
+                .fill(.white)
             VStack {
                 TextEditor(text: $text)
-                    .frame(minHeight: 80)
-                    .padding()
+                    .frame(minHeight: 100)
+                    .cornerRadius(25)
+                    .padding([.top, .horizontal])
                 HStack {
                     Spacer()
                     Button("Add") {
@@ -36,11 +30,10 @@ struct ThingAdder: View {
                             text = ""
                         }
                     }
-                    .padding()
+                    .padding([.trailing, .bottom])
                 }
             }
         }
-        .frame(minHeight: 200)
         .padding()
     }
 }
