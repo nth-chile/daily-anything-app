@@ -5,18 +5,16 @@ struct ThingCard: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(.white)
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(.regularMaterial)
             HStack {
                 Text(thing.value ?? "")
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                 Spacer()
-                Image(systemName: "chevron.right")
             }
             .padding()
-            .lineLimit(1)
+            .lineLimit(8)
         }
-        .padding([.horizontal, .bottom])
     }
 }

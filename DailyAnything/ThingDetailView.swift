@@ -27,26 +27,30 @@ struct ThingDetailView: View {
     var body: some View {
         VStack {
             VStack {
-                ZStack(alignment: .leading) {
-                    Text(text)
-                        .foregroundColor(.clear)
-                        .frame(maxWidth: .infinity)
-                        .background(
-                            GeometryReader {
-                                Color.clear.preference(
-                                    key: ViewHeightKey.self,
-                                    value: $0.frame(in: .local).size.height
-                                )
-                            }
-                        )
-                    TextEditor(text: $text)
-                        .disabled(!isEditing)
-                        .foregroundColor(.primary)
-                        .frame(height: height + 10)
-                        .multilineTextAlignment(.leading)
+                ScrollView {
+                    ZStack(alignment: .leading) {
+                        Text(text)
+                            .foregroundColor(.clear)
+                            .frame(maxWidth: .infinity)
+                            .background(
+                                GeometryReader {
+                                    Color.clear.preference(
+                                        key: ViewHeightKey.self,
+                                        value: $0.frame(in: .local).size.height
+                                    )
+                                }
+                            )
+                        TextEditor(text: $text)
+                            .disabled(!isEditing)
+                            .foregroundColor(.primary)
+                            .frame(height: height + 10)
+                            .multilineTextAlignment(.leading)
+                            .scrollContentBackground(.hidden)
+                    }
+                    .onPreferenceChange(ViewHeightKey.self) { height = $0 }
                 }
-                .onPreferenceChange(ViewHeightKey.self) { height = $0 }
-                .padding([.top, .horizontal])
+                .frame(maxHeight: height + 10)
+                .padding([.horizontal, .top])
                 HStack {
                     if isEditing {
                         Button ("Cancel", role: .destructive) {
@@ -57,7 +61,7 @@ struct ThingDetailView: View {
                     Spacer()
                     if isEditing {
                         Button ("Save") {
-                            thing.value = text
+                            thing.value = withSingleNewline(text)
                             try? moc.save()
                             savedText = text
                             isEditing.toggle()
@@ -71,16 +75,14 @@ struct ThingDetailView: View {
                 .padding([.horizontal, .bottom])
             }
             .background(
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .fill(.white)
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(.regularMaterial)
             )
-            .padding([.horizontal])
             Spacer()
             Button("Delete", role: .destructive) {
                 isDeleteAlertPresented.toggle()
             }
         }
-        .background(.regularMaterial)
         .alert(isPresented: $isDeleteAlertPresented) {
             Alert(
                 title: Text("Delete"),

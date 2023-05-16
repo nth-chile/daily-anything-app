@@ -8,7 +8,7 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section() {
-                Toggle("Allow reminders", isOn: $allowReminders)
+                Toggle("Allow notifications", isOn: $allowReminders)
                     .onChange(of: allowReminders) { value in
                         Task {
                             // Even if toggle is being turned off, this function will handle that too
@@ -20,7 +20,7 @@ struct SettingsView: View {
             if allowReminders == true {
                 Section() {
                     DatePicker(
-                        "Times",
+                        "Daily notification time",
                         selection: $time,
                         displayedComponents: [.hourAndMinute]
                     ).onChange(of: time) { newValue in

@@ -18,9 +18,6 @@ struct DailyAnythingApp: App {
         UserDefaults.standard.set(true, forKey: "allowReminders")
 
         Task {
-            // Schedule a test notif that appears in 5 seconds
-            await TESTscheduleTestNotif()
-
             await scheduleDailyNotification(moc: dataController.moc)
         }
     }

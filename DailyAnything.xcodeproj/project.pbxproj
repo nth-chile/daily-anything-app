@@ -13,12 +13,12 @@
 		29952092284A5E2700318DFC /* DailyAnythingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29952091284A5E2700318DFC /* DailyAnythingApp.swift */; };
 		29952094284A5E2700318DFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29952093284A5E2700318DFC /* ContentView.swift */; };
 		29952096284A5E2800318DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29952095284A5E2800318DFC /* Assets.xcassets */; };
-		29952099284A5E2800318DFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29952098284A5E2800318DFC /* Preview Assets.xcassets */; };
 		29BE8CD9284A6F2100554980 /* DailyAnything.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29BE8CD7284A6F2100554980 /* DailyAnything.xcdatamodeld */; };
 		29BE8CDB284A70B200554980 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BE8CDA284A70B200554980 /* DataController.swift */; };
-		29BF867028523BE700B88E4E /* ThingAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF866F28523BE700B88E4E /* ThingAdder.swift */; };
+		29C6B72C2A097D4D006B192A /* ThingAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6B72B2A097D4D006B192A /* ThingAdder.swift */; };
 		29CB27B828537AE6005AFA07 /* ThingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27B728537AE6005AFA07 /* ThingCard.swift */; };
 		29CB27BC28538438005AFA07 /* ThingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CB27BB28538438005AFA07 /* ThingDetailView.swift */; };
+		29D259DF29F5DE47000C728B /* withSingleNewline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D259DE29F5DE47000C728B /* withSingleNewline.swift */; };
 		7F166885299784E3009706EF /* UNCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F166884299784E3009706EF /* UNCDelegate.swift */; };
 		7F16688729978652009706EF /* TESTscheduleTestNotif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F16688629978652009706EF /* TESTscheduleTestNotif.swift */; };
 		7F18CC4C29B60F1C00AB630A /* NextThingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18CC4B29B60F1C00AB630A /* NextThingView.swift */; };
@@ -29,16 +29,17 @@
 		2904DD4F28637C89003A13A4 /* scheduleDailyNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDailyNotification.swift; sourceTree = "<group>"; };
 		2904DD5228637F71003A13A4 /* getNextThing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getNextThing.swift; sourceTree = "<group>"; };
 		292CB814285A04B200004A3E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2995208E284A5E2700318DFC /* DailyAnything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyAnything.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2995208E284A5E2700318DFC /* Daily Anything.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Anything.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29952091284A5E2700318DFC /* DailyAnythingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAnythingApp.swift; sourceTree = "<group>"; };
 		29952093284A5E2700318DFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29952095284A5E2800318DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		29952098284A5E2800318DFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29BE8CD8284A6F2100554980 /* DailyAnything.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyAnything.xcdatamodel; sourceTree = "<group>"; };
 		29BE8CDA284A70B200554980 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		29BF866F28523BE700B88E4E /* ThingAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingAdder.swift; sourceTree = "<group>"; };
+		29C6B72B2A097D4D006B192A /* ThingAdder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingAdder.swift; sourceTree = "<group>"; };
 		29CB27B728537AE6005AFA07 /* ThingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCard.swift; sourceTree = "<group>"; };
 		29CB27BB28538438005AFA07 /* ThingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingDetailView.swift; sourceTree = "<group>"; };
+		29D259DB29F5B6AE000C728B /* DailyAnything.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyAnything.entitlements; sourceTree = "<group>"; };
+		29D259DE29F5DE47000C728B /* withSingleNewline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withSingleNewline.swift; sourceTree = "<group>"; };
 		7F166884299784E3009706EF /* UNCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNCDelegate.swift; sourceTree = "<group>"; };
 		7F16688629978652009706EF /* TESTscheduleTestNotif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTscheduleTestNotif.swift; sourceTree = "<group>"; };
 		7F18CC4B29B60F1C00AB630A /* NextThingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextThingView.swift; sourceTree = "<group>"; };
@@ -64,8 +65,16 @@
 				7F16688629978652009706EF /* TESTscheduleTestNotif.swift */,
 				2904DD5228637F71003A13A4 /* getNextThing.swift */,
 				7F870583299232E200670E6E /* getNotificationTime.swift */,
+				29D259DE29F5DE47000C728B /* withSingleNewline.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		292B831029E719F9005FFB03 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		29952085284A5E2700318DFC = {
@@ -79,7 +88,7 @@
 		2995208F284A5E2700318DFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2995208E284A5E2700318DFC /* DailyAnything.app */,
+				2995208E284A5E2700318DFC /* Daily Anything.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +96,7 @@
 		29952090284A5E2700318DFC /* DailyAnything */ = {
 			isa = PBXGroup;
 			children = (
+				29D259DB29F5B6AE000C728B /* DailyAnything.entitlements */,
 				29952095284A5E2800318DFC /* Assets.xcassets */,
 				29952093284A5E2700318DFC /* ContentView.swift */,
 				29BE8CD7284A6F2100554980 /* DailyAnything.xcdatamodeld */,
@@ -94,9 +104,9 @@
 				29BE8CDA284A70B200554980 /* DataController.swift */,
 				7F18CC4B29B60F1C00AB630A /* NextThingView.swift */,
 				7F9A9D1D2992A40100D65A31 /* Info.plist */,
-				29952097284A5E2800318DFC /* Preview Content */,
+				292B831029E719F9005FFB03 /* Preview Content */,
 				292CB814285A04B200004A3E /* SettingsView.swift */,
-				29BF866F28523BE700B88E4E /* ThingAdder.swift */,
+				29C6B72B2A097D4D006B192A /* ThingAdder.swift */,
 				29CB27B728537AE6005AFA07 /* ThingCard.swift */,
 				29CB27BB28538438005AFA07 /* ThingDetailView.swift */,
 				7F166884299784E3009706EF /* UNCDelegate.swift */,
@@ -105,20 +115,12 @@
 			path = DailyAnything;
 			sourceTree = "<group>";
 		};
-		29952097284A5E2800318DFC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				29952098284A5E2800318DFC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2995208D284A5E2700318DFC /* DailyAnything */ = {
+		2995208D284A5E2700318DFC /* Daily Anything */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2995209C284A5E2800318DFC /* Build configuration list for PBXNativeTarget "DailyAnything" */;
+			buildConfigurationList = 2995209C284A5E2800318DFC /* Build configuration list for PBXNativeTarget "Daily Anything" */;
 			buildPhases = (
 				2995208A284A5E2700318DFC /* Sources */,
 				2995208B284A5E2700318DFC /* Frameworks */,
@@ -128,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = DailyAnything;
+			name = "Daily Anything";
 			productName = DailyAnything;
-			productReference = 2995208E284A5E2700318DFC /* DailyAnything.app */;
+			productReference = 2995208E284A5E2700318DFC /* Daily Anything.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2995208D284A5E2700318DFC /* DailyAnything */,
+				2995208D284A5E2700318DFC /* Daily Anything */,
 			);
 		};
 /* End PBXProject section */
@@ -171,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29952099284A5E2800318DFC /* Preview Assets.xcassets in Resources */,
 				29952096284A5E2800318DFC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,10 +189,11 @@
 				7F16688729978652009706EF /* TESTscheduleTestNotif.swift in Sources */,
 				2904DD5028637C89003A13A4 /* scheduleDailyNotification.swift in Sources */,
 				29CB27B828537AE6005AFA07 /* ThingCard.swift in Sources */,
+				29C6B72C2A097D4D006B192A /* ThingAdder.swift in Sources */,
 				292CB815285A04B200004A3E /* SettingsView.swift in Sources */,
-				29BF867028523BE700B88E4E /* ThingAdder.swift in Sources */,
 				29CB27BC28538438005AFA07 /* ThingDetailView.swift in Sources */,
 				29BE8CD9284A6F2100554980 /* DailyAnything.xcdatamodeld in Sources */,
+				29D259DF29F5DE47000C728B /* withSingleNewline.swift in Sources */,
 				29BE8CDB284A70B200554980 /* DataController.swift in Sources */,
 				29952094284A5E2700318DFC /* ContentView.swift in Sources */,
 				7F166885299784E3009706EF /* UNCDelegate.swift in Sources */,
@@ -253,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -307,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -322,26 +324,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyAnything/DailyAnything.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
-				DEVELOPMENT_TEAM = D6GZ2XP6D2;
+				DEVELOPMENT_TEAM = UVZCK6U53N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyAnything/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shipyardnyc.DailyAnything;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,19 +360,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyAnything/DailyAnything.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
-				DEVELOPMENT_TEAM = D6GZ2XP6D2;
+				DEVELOPMENT_TEAM = UVZCK6U53N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyAnything/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +381,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shipyardnyc.DailyAnything;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2995209C284A5E2800318DFC /* Build configuration list for PBXNativeTarget "DailyAnything" */ = {
+		2995209C284A5E2800318DFC /* Build configuration list for PBXNativeTarget "Daily Anything" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2995209D284A5E2800318DFC /* Debug */,

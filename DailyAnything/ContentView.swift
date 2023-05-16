@@ -52,7 +52,7 @@ struct ContentView: View {
                     )
                 )
             }
-            .background(.regularMaterial)
+            .background(.background)
             .onAppear() {
                 if !didCheckNotifsOnLaunch {
                     Task {

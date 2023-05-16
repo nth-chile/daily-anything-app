@@ -31,8 +31,8 @@ func scheduleDailyNotification (moc: NSManagedObjectContext) async -> Void {
     let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
     let content = UNMutableNotificationContent()
-    content.title = "Reminder"
-    content.body = "Reminder"
+    content.title = "Today's thing"
+    content.body = "Tap to view"
     content.sound = UNNotificationSound.default
     let request = UNNotificationRequest(identifier: "dailyThingReminder", content: content, trigger: trigger)
     

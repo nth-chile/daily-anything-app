@@ -2,23 +2,29 @@ import SwiftUI
 
 struct ThingAdder: View {
     @Environment(\.managedObjectContext) var moc
+    @FocusState private var isFocused: Bool
     @State private var text = ""
-    
-    // TextEditor is backed by UITextView. So you need to get rid of the UITextView's backgroundColor first and then you can set any View to the background.
-    init() {
-        UITextView.appearance().backgroundColor = .clear
-    }
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(.white)
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(.regularMaterial)
             VStack {
                 TextEditor(text: $text)
                     .frame(minHeight: 100)
-                    .cornerRadius(25)
+                    .scrollContentBackground(.hidden)
+                    .background(.clear)
+                    .cornerRadius(20)
+                    .focused($isFocused)
                     .padding([.top, .horizontal])
                 HStack {
+                    if isFocused {
+                        Button("Cancel") {
+                            text = ""
+                            isFocused.toggle()
+                        }
+                        .padding([.leading, .bottom])
+                    }
                     Spacer()
                     Button("Add") {
                         if !text.isEmpty {
@@ -34,6 +40,5 @@ struct ThingAdder: View {
                 }
             }
         }
-        .padding()
     }
 }
