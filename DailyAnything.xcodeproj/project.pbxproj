@@ -70,13 +70,6 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		292B831029E719F9005FFB03 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		29952085284A5E2700318DFC = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +97,6 @@
 				29BE8CDA284A70B200554980 /* DataController.swift */,
 				7F18CC4B29B60F1C00AB630A /* NextThingView.swift */,
 				7F9A9D1D2992A40100D65A31 /* Info.plist */,
-				292B831029E719F9005FFB03 /* Preview Content */,
 				292CB814285A04B200004A3E /* SettingsView.swift */,
 				29C6B72B2A097D4D006B192A /* ThingAdder.swift */,
 				29CB27B728537AE6005AFA07 /* ThingCard.swift */,
@@ -327,7 +319,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyAnything/DailyAnything.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UVZCK6U53N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -366,7 +358,7 @@
 				CODE_SIGN_ENTITLEMENTS = DailyAnything/DailyAnything.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyAnything/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = UVZCK6U53N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
