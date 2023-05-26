@@ -6,7 +6,7 @@ enum NavDestinations {
 }
 
 struct ContentView: View {
-    @FetchRequest(sortDescriptors: []) var things: FetchedResults<Thing>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "lastSeen", ascending: false)]) var things: FetchedResults<Thing>
     @Binding var didCheckNotifsOnLaunch: Bool
     @State private var showCustomNotifAlert = false
     @EnvironmentObject private var uncDelegate: UNCDelegate
@@ -22,6 +22,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                .padding(.horizontal)
             }
             .navigationTitle("Things")
             .navigationDestination(for: NavDestinations.self) { destination in

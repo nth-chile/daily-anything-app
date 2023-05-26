@@ -82,7 +82,9 @@ struct ThingDetailView: View {
             Button("Delete", role: .destructive) {
                 isDeleteAlertPresented.toggle()
             }
+            .padding()
         }
+        .padding(.horizontal)
         .alert(isPresented: $isDeleteAlertPresented) {
             Alert(
                 title: Text("Delete"),
