@@ -40,6 +40,7 @@ struct ThingDetailView: View {
                                     )
                                 }
                             )
+                            .textSelection(.enabled)
                         TextEditor(text: $text)
                             .disabled(!isEditing)
                             .foregroundColor(.primary)
