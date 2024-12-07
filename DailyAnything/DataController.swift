@@ -1,6 +1,6 @@
-import CoreData
 import Foundation
 import CloudKit
+import CoreData
 
 class DataController: ObservableObject {
     let container: NSPersistentCloudKitContainer
@@ -14,15 +14,18 @@ class DataController: ObservableObject {
                 print("Core Data failed to load: \(error.localizedDescription)")
             }
         }
-        
-        #if DEBUG
-        do {
-            try container.initializeCloudKitSchema(options: [])
-        } catch {
-            print("Error initializing CloudKit schema: \(error.localizedDescription)")
-        }
-        #endif
+
+//        #if DEBUG
+//        ChatGPT says this should happen automatically
+//        do {
+//            try container.initializeCloudKitSchema(options: [])
+//        } catch {
+//            print("Error initializing CloudKit schema: \(error.localizedDescription)")
+//        }
+//        #endif
         
         moc = container.viewContext
+        moc.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        moc.automaticallyMergesChangesFromParent = true
     }
 }
