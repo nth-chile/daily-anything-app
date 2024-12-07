@@ -18,6 +18,8 @@ class UNCDelegate: NSObject, ObservableObject, UNUserNotificationCenterDelegate 
             response.notification.request.identifier == "dailyThingReminder"
         ) {
             // User tapped the reminder notification and app is not in the foreground
+            // Reset navigationPath to avoid pushing multiple screens to the stack
+            navigationPath = NavigationPath()
             navigationPath.append(NavDestinations.nextThing)
             completionHandler()
         }
