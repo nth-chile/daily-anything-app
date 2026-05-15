@@ -3,6 +3,7 @@ import CoreData
 // Fetch the next Thing without updating its lastSeen date
 func getNextThing(_ moc: NSManagedObjectContext) -> Thing? {
     let request: NSFetchRequest<Thing> = NSFetchRequest(entityName: "Thing")
+    request.predicate = NSPredicate(format: "isArchived == NO OR isArchived == nil")
     request.sortDescriptors = [NSSortDescriptor(key: "lastSeen", ascending: true)]
     request.fetchLimit = 1
     

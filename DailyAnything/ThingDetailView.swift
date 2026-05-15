@@ -80,6 +80,11 @@ struct ThingDetailView: View {
                     .fill(.regularMaterial)
             )
             Spacer()
+            Button(thing.isArchived ? "Move to Active" : "Mark as Archived") {
+                thing.isArchived.toggle()
+                try? moc.save()
+            }
+            .padding(.top)
             Button("Delete", role: .destructive) {
                 isDeleteAlertPresented.toggle()
             }
