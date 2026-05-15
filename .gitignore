@@ -1,0 +1,17 @@
+# Xcode user-specific
+**/xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Build artifacts
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# macOS
+.DS_Store
+
+# Claude Code local
+.claude/
